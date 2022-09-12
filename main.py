@@ -1,6 +1,7 @@
 import os
 import time
 import stdiomask
+import platform
 try:
     import requests
     from colorama import init, Fore
@@ -10,8 +11,7 @@ except ModuleNotFoundError:
     os.system('pip install colorama')
     from colorama import init, Fore
 
-# os.system('clear') Mac/Linux Users
-os.system('cls')
+os.system("cls" if platform.system() == "Windows" else "clear")
 init(autoreset=True)
 r = requests.Session()
 
@@ -103,8 +103,8 @@ def main():
 
     scraper.login(username=username, password=password)
 
-    # os.system('clear') Mac/Linux Users
-    os.system('cls')
+    os.system("cls" if platform.system() == "Windows" else "clear")
+    
     while True:
         scraper_logo = f""" {Fore.LIGHTCYAN_EX}
  __                                
