@@ -5,7 +5,9 @@ This program scrapes and outputs a user's profile information.
 
 # Requirements
 ## Python3 
-Download: https://www.python.org/downloads/ 
+Download: https://www.python.org/downloads/
+## Instagram Account
+Make sure to use your second Instagram Account to Login and Scrape! 
 
 # Instructions 
 ## Login
