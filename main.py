@@ -52,11 +52,12 @@ class Scraper:
             }
 
             target_info = f"https://i.instagram.com/api/v1/users/web_profile_info/?username={target}"
-
+            
             user_info = r.get(target_info, headers=headers)
             # DATA
 
             time.sleep(2)
+            # Getting User Information
             userId = user_info.json()["data"]["user"]["id"]
             username = user_info.json()["data"]["user"]["username"]
             pfp_url = user_info.json()["data"]["user"]["profile_pic_url_hd"]
@@ -69,6 +70,9 @@ class Scraper:
             posts = user_info.json()["data"]["user"]["edge_owner_to_timeline_media"]["count"]
             followers = user_info.json()["data"]["user"]["edge_followed_by"]["count"]
             following = user_info.json()["data"]["user"]["edge_follow"]["count"]
+            
+            # Printing out the info
+            
             scraper_info = f"""
 [{Fore.LIGHTGREEN_EX}userId{Fore.RESET}]: {userId}
 [{Fore.LIGHTGREEN_EX}Username{Fore.RESET}]: {username}
