@@ -26,7 +26,7 @@ class Scraper:
             "content-type": "application/x-www-form-urlencoded"
         }
 
-        url = "https://www.instagram.com/accounts/login/ajax/"
+        url = "https://i.instagram.com/api/v1/web/accounts/login/ajax/"
 
         data = {
             "enc_password": "#PWD_INSTAGRAM_BROWSER:0:1662950310:" + password,
